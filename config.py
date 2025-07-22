@@ -1,0 +1,2 @@
+# File I/O
+MAX_CHARACTERS = 10000

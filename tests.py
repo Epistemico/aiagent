@@ -1,7 +1,8 @@
 from functions.get_files_info import get_files_info
+from functions.get_file_content import get_file_content
 
 
-def test():
+def testGetFilesInfo():
     result = get_files_info("calculator", ".")
     print("Result for current directory:")
     print(result)
@@ -23,5 +24,25 @@ def test():
     print()
 
 
+def testGetFileContent():
+    result = get_file_content("calculator", "lorem.txt")
+    print(result)
+
+    result = get_file_content("calculator", "main.py")
+    print(result)
+
+    result = get_file_content("calculator", "pkg/calculator.py")
+    print(result)
+
+    result = get_file_content("calculator", "/bin/cat")
+    print(result)
+    print()
+
+    result = get_file_content("calculator", "pkg/does_not_exist.py")
+    print(result)
+    print()
+
+
 if __name__ == "__main__":
-    test()
+    testGetFilesInfo()
+    testGetFileContent()

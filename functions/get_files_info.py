@@ -12,11 +12,13 @@ def get_files_info(working_directory, directory="."):
     
     try:
         files_info = []
+
         for file in os.listdir(target_path):
             file_path = os.path.join(target_path, file)
             file_size = os.path.getsize(file_path)
             is_dir = os.path.isdir(file_path)
             files_info.append(f"- {file}: file_size={file_size} bytes, is_dir={is_dir}")
+
         return "\n".join(files_info)
     except OSError as e: 
         return f"Error: {e}"
