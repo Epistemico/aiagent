@@ -32,7 +32,7 @@ schema_get_file_content = types.FunctionDeclaration(
         properties={
             "file_path": types.Schema(
                 type=types.Type.STRING,
-                description="The directory to open and read the file from, relative to the working directory. If not provided, returns an error message.",
+                description="The directory to open and read the file from, relative to the working directory.",
             ),
         },
         required=["file_path"],
