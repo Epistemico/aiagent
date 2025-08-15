@@ -3,3 +3,6 @@ MAX_CHARACTERS = 10000
 
 # Working Directory
 WORKING_DIR = "./calculator"
+
+# Number of Iterations
+MAX_ITERS = 20
